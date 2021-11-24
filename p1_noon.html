@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <title>p1_noon</title>
+    <link rel="stylesheet" href="./css/system.css" />
+
+    <script>
+    //JSON読み込み＆画面表示//
+        $(function(){
+            $.getJSON("drugdata.json",display);
+        });
+        function display(drugdata){
+            $("#p1_name").html(drugdata[1].name);
+            $("#p1noon_dn1").html(
+                drugdata[1].noon.drugname[0]+"<br>"+
+                drugdata[1].noon.drugname[1]+"<br>"+
+                drugdata[1].noon.drugname[2]+"<br>"+
+                drugdata[1].noon.drugname[3]+"<br>"+
+                drugdata[1].noon.drugname[4])
+            $("#p1noon_dd").html(
+                drugdata[1].noon.drugdose[0]+"<br>"+
+                drugdata[1].noon.drugdose[1]+"<br>"+
+                drugdata[1].noon.drugdose[2]+"<br>"+
+                drugdata[1].noon.drugdose[3]+"<br>"+
+                drugdata[1].noon.drugdose[4]
+            )
+            $("#p1noon_dn2").html(
+                drugdata[1].noon.drugname[0]+"<br>"+
+                drugdata[1].noon.drugname[1]+"<br>"+
+                drugdata[1].noon.drugname[2]+"<br>"+
+                drugdata[1].noon.drugname[3]+"<br>"+
+                drugdata[1].noon.drugname[4])
+            $("#p1noon_p").html(
+                drugdata[1].noon.purpose[0]+"<br>"+
+                drugdata[1].noon.purpose[1]+"<br>"+
+                drugdata[1].noon.purpose[2]+"<br>"+
+                drugdata[1].noon.purpose[3]+"<br>"+
+                drugdata[1].noon.purpose[4]
+            )
+            $("#p1noon_n").html(drugdata[1].noon.note)
+            $("#p1noon_t").html(drugdata[1].noon.time)
+        }
+    //JSON読み込み＆画面表示//
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <p class="title">与薬情報閲覧画面</p>
+        </header>
+        
+    <div class="main">
+    <br>
+    <table border="1" class="list">
+        <caption>与薬情報</caption>
+        <tr>
+            <td colspan="2">与薬情報を閲覧して薬剤を確認してください</td>
+        </tr>
+        <tr>
+            <th colspan="2">氏名</th>
+        </tr>
+        <tr>
+            <td colspan="2" id="p1_name"></td>
+        </tr>
+        <tr>
+            <th>処方薬</th><th>用量</th>
+        </tr>
+        <tr>
+            <td id="p1noon_dn1"></td><td id="p1noon_dd"></td>
+        </tr>
+        <tr>
+            <th colspan="2">使用目的</th>
+        </tr>
+        <tr>
+            <td id="p1noon_dn2"></td><td id="p1noon_p"></td>
+        </tr>
+        <tr>
+            <th colspan="2">備考</th>
+        </tr>
+        <tr>
+            <td colspan="2" id="p1noon_n"></td>
+        </tr>
+        <tr>
+            <th colspan="2">投与時刻</th>
+        </tr>
+        <tr>
+            <td colspan="2" id="p1noon_t"></td>
+        </tr>
+    </table>
+    </div>
+
+    <footer>
+        <div style="float:left"><a href="patient1.html" class="btn-stitch">もどる</a></div><div style="text-align: right"><a href="p1_nooncheck.html" class="btn-check">確認する</a></div>
+    </footer>
+    
+    </div>
+</body>
+</html>
