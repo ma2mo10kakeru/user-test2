@@ -21,19 +21,16 @@
             $("#p2morning_dn2").html(drugdata[2].morning.drugname[2])
             $("#p2morning_dn3").html(drugdata[2].morning.drugname[3])
             $("#p2morning_dn4").html(drugdata[2].morning.drugname[4])
-            $("#p2morning_dn").html(
-                drugdata[2].morning.drugname[0]+"<br>"+
-                drugdata[2].morning.drugname[1]+"<br>"+
-                drugdata[2].morning.drugname[2]+"<br>"+
-                drugdata[2].morning.drugname[3]+"<br>"+
-                drugdata[2].morning.drugname[4])
-            $("#p2morning_p").html(
-                drugdata[2].morning.purpose[0]+"<br>"+
-                drugdata[2].morning.purpose[1]+"<br>"+
-                drugdata[2].morning.purpose[2]+"<br>"+
-                drugdata[2].morning.purpose[3]+"<br>"+
-                drugdata[2].morning.purpose[4]
-            )
+            $("#p2morning_dn00").html(drugdata[2].morning.drugname[0])
+            $("#p2morning_dn01").html(drugdata[2].morning.drugname[1])
+            $("#p2morning_dn02").html(drugdata[2].morning.drugname[2])
+            $("#p2morning_dn03").html(drugdata[2].morning.drugname[3])
+            $("#p2morning_dn04").html(drugdata[2].morning.drugname[4])
+            $("#p2morning_dp0").html(drugdata[2].morning.purpose[0])
+            $("#p2morning_dp1").html(drugdata[2].morning.purpose[1])
+            $("#p2morning_dp2").html(drugdata[2].morning.purpose[2])
+            $("#p2morning_dp3").html(drugdata[2].morning.purpose[3])
+            $("#p2morning_dp4").html(drugdata[2].morning.purpose[4])
             $("#p2morning_n").html(drugdata[2].morning.note)
             $("#p2morning_t").html(drugdata[2].morning.time)
         }
@@ -115,7 +112,19 @@
             <th colspan="2">使用目的</th>
         </tr>
         <tr>
-            <td id="p2morning_dn"></td><td id="p2morning_p"></td>
+            <td id="p2morning_dn00"></td><td id="p2morning_dp0"></td>
+        </tr>
+        <tr>
+            <td id="p2morning_dn01"></td><td id="p2morning_dp1"></td>
+        </tr>
+        <tr>
+            <td id="p2morning_dn02"></td><td id="p2morning_dp2"></td>
+        </tr>
+        <tr>
+            <td id="p2morning_dn03"></td><td id="p2morning_dp3"></td>
+        </tr>
+        <tr>
+            <td id="p2morning_dn04"></td><td id="p2morning_dp4"></td>
         </tr>
         <tr>
             <th colspan="2">備考</th>
