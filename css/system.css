@@ -280,5 +280,6 @@ footer {
     position: absolute;
     bottom: 0;
     background-color: rgb(245, 235, 247);
+    padding-bottom: calc(env(safe-area-inset-bottom));
 }
 /*画面構成*/
