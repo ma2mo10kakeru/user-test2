@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover">
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <title>p1_morning</title>
     <link rel="stylesheet" href="./css/system.css" />
@@ -12,35 +12,29 @@
             $.getJSON("drugdata.json",display);
         });
         function display(drugdata){
-            $("#p1_name").html(drugdata[1].name);
-            $("#p1morning_dn1").html(
-                drugdata[1].morning.drugname[0]+"<br>"+
-                drugdata[1].morning.drugname[1]+"<br>"+
-                drugdata[1].morning.drugname[2]+"<br>"+
-                drugdata[1].morning.drugname[3]+"<br>"+
-                drugdata[1].morning.drugname[4])
-            $("#p1morning_dd").html(
-                drugdata[1].morning.drugdose[0]+"<br>"+
-                drugdata[1].morning.drugdose[1]+"<br>"+
-                drugdata[1].morning.drugdose[2]+"<br>"+
-                drugdata[1].morning.drugdose[3]+"<br>"+
-                drugdata[1].morning.drugdose[4]
-            )
-            $("#p1morning_dn2").html(
-                drugdata[1].morning.drugname[0]+"<br>"+
-                drugdata[1].morning.drugname[1]+"<br>"+
-                drugdata[1].morning.drugname[2]+"<br>"+
-                drugdata[1].morning.drugname[3]+"<br>"+
-                drugdata[1].morning.drugname[4])
-            $("#p1morning_p").html(
-                drugdata[1].morning.purpose[0]+"<br>"+
-                drugdata[1].morning.purpose[1]+"<br>"+
-                drugdata[1].morning.purpose[2]+"<br>"+
-                drugdata[1].morning.purpose[3]+"<br>"+
-                drugdata[1].morning.purpose[4]
-            )
-            $("#p1morning_n").html(drugdata[1].morning.note)
-            $("#p1morning_t").html(drugdata[1].morning.time)
+            $("#p1_name").html(drugdata[3].name);
+            $("#p1morning_dn0").html(drugdata[3].morning.drugname[0])
+            $("#p1morning_dn1").html(drugdata[3].morning.drugname[1])
+            $("#p1morning_dn2").html(drugdata[3].morning.drugname[2])
+            $("#p1morning_dn3").html(drugdata[3].morning.drugname[3])
+            $("#p1morning_dn4").html(drugdata[3].morning.drugname[4])
+            $("#p1morning_dd0").html(drugdata[3].morning.drugdose[0])
+            $("#p1morning_dd1").html(drugdata[3].morning.drugdose[1])
+            $("#p1morning_dd2").html(drugdata[3].morning.drugdose[2])
+            $("#p1morning_dd3").html(drugdata[3].morning.drugdose[3])
+            $("#p1morning_dd4").html(drugdata[3].morning.drugdose[4])
+            $("#p1morning_dn00").html(drugdata[3].morning.drugname[0])
+            $("#p1morning_dn01").html(drugdata[3].morning.drugname[1])
+            $("#p1morning_dn02").html(drugdata[3].morning.drugname[2])
+            $("#p1morning_dn03").html(drugdata[3].morning.drugname[3])
+            $("#p1morning_dn04").html(drugdata[3].morning.drugname[4])
+            $("#p1morning_p0").html(drugdata[3].morning.purpose[0])
+            $("#p1morning_p1").html(drugdata[3].morning.purpose[1])
+            $("#p1morning_p2").html(drugdata[3].morning.purpose[2])
+            $("#p1morning_p3").html(drugdata[3].morning.purpose[3])
+            $("#p1morning_p4").html(drugdata[3].morning.purpose[4])
+            $("#p1morning_n").html(drugdata[3].morning.note)
+            $("#p1morning_t").html(drugdata[3].morning.time)
         }
     //JSON読み込み＆画面表示//
     </script>
@@ -69,13 +63,37 @@
             <th>処方薬</th><th>用量</th>
         </tr>
         <tr>
-            <td id="p1morning_dn1"></td><td id="p1morning_dd"></td>
+            <td id="p1morning_dn0"></td><td id="p1morning_dd0"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn1"></td><td id="p1morning_dd1"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn2"></td><td id="p1morning_dd2"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn3"></td><td id="p1morning_dd3"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn4"></td><td id="p1morning_dd4"></td>
         </tr>
         <tr>
             <th colspan="2">使用目的</th>
         </tr>
         <tr>
-            <td id="p1morning_dn2"></td><td id="p1morning_p"></td>
+            <td id="p1morning_dn00"></td><td id="p1morning_p0"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn01"></td><td id="p1morning_p1"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn02"></td><td id="p1morning_p2"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn03"></td><td id="p1morning_p3"></td>
+        </tr>
+        <tr>
+            <td id="p1morning_dn04"></td><td id="p1morning_p4"></td>
         </tr>
         <tr>
             <th colspan="2">備考</th>
