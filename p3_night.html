@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover">
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <title>p3_night</title>
     <link rel="stylesheet" href="./css/system.css" />
@@ -13,32 +13,26 @@
         });
         function display(drugdata){
             $("#p3_name").html(drugdata[3].name);
-            $("#p3night_dn1").html(
-                drugdata[3].night.drugname[0]+"<br>"+
-                drugdata[3].night.drugname[1]+"<br>"+
-                drugdata[3].night.drugname[2]+"<br>"+
-                drugdata[3].night.drugname[3]+"<br>"+
-                drugdata[3].night.drugname[4])
-            $("#p3night_dd").html(
-                drugdata[3].night.drugdose[0]+"<br>"+
-                drugdata[3].night.drugdose[1]+"<br>"+
-                drugdata[3].night.drugdose[2]+"<br>"+
-                drugdata[3].night.drugdose[3]+"<br>"+
-                drugdata[3].night.drugdose[4]
-            )
-            $("#p3night_dn2").html(
-                drugdata[3].night.drugname[0]+"<br>"+
-                drugdata[3].night.drugname[1]+"<br>"+
-                drugdata[3].night.drugname[2]+"<br>"+
-                drugdata[3].night.drugname[3]+"<br>"+
-                drugdata[3].night.drugname[4])
-            $("#p3night_p").html(
-                drugdata[3].night.purpose[0]+"<br>"+
-                drugdata[3].night.purpose[1]+"<br>"+
-                drugdata[3].night.purpose[2]+"<br>"+
-                drugdata[3].night.purpose[3]+"<br>"+
-                drugdata[3].night.purpose[4]
-            )
+            $("#p3night_dn0").html(drugdata[3].night.drugname[0])
+            $("#p3night_dn1").html(drugdata[3].night.drugname[1])
+            $("#p3night_dn2").html(drugdata[3].night.drugname[2])
+            $("#p3night_dn3").html(drugdata[3].night.drugname[3])
+            $("#p3night_dn4").html(drugdata[3].night.drugname[4])
+            $("#p3night_dd0").html(drugdata[3].night.drugdose[0])
+            $("#p3night_dd1").html(drugdata[3].night.drugdose[1])
+            $("#p3night_dd2").html(drugdata[3].night.drugdose[2])
+            $("#p3night_dd3").html(drugdata[3].night.drugdose[3])
+            $("#p3night_dd4").html(drugdata[3].night.drugdose[4])
+            $("#p3night_dn00").html(drugdata[3].night.drugname[0])
+            $("#p3night_dn01").html(drugdata[3].night.drugname[1])
+            $("#p3night_dn02").html(drugdata[3].night.drugname[2])
+            $("#p3night_dn03").html(drugdata[3].night.drugname[3])
+            $("#p3night_dn04").html(drugdata[3].night.drugname[4])
+            $("#p3night_p0").html(drugdata[3].night.purpose[0])
+            $("#p3night_p1").html(drugdata[3].night.purpose[1])
+            $("#p3night_p3").html(drugdata[3].night.purpose[2])
+            $("#p3night_p3").html(drugdata[3].night.purpose[3])
+            $("#p3night_p4").html(drugdata[3].night.purpose[4])
             $("#p3night_n").html(drugdata[3].night.note)
             $("#p3night_t").html(drugdata[3].night.time)
         }
@@ -69,13 +63,37 @@
             <th>処方薬</th><th>用量</th>
         </tr>
         <tr>
-            <td id="p3night_dn1"></td><td id="p3night_dd"></td>
+            <td id="p3night_dn0"></td><td id="p3night_dd0"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn1"></td><td id="p3night_dd1"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn2"></td><td id="p3night_dd2"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn3"></td><td id="p3night_dd3"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn4"></td><td id="p3night_dd4"></td>
         </tr>
         <tr>
             <th colspan="2">使用目的</th>
         </tr>
         <tr>
-            <td id="p3night_dn2"></td><td id="p3night_p"></td>
+            <td id="p3night_dn00"></td><td id="p3night_p0"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn01"></td><td id="p3night_p1"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn02"></td><td id="p3night_p3"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn03"></td><td id="p3night_p2"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn04"></td><td id="p3night_p4"></td>
         </tr>
         <tr>
             <th colspan="2">備考</th>
