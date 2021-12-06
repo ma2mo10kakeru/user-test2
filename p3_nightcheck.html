@@ -8,7 +8,7 @@
 
     <script type="text/javascript">
         //LocalStorageの入れ物//
-        var P3_STATUS2 = "P3_ST2";
+        var P3_STATUS1 = "P3_ST1";
 
         //JSON読み込み＆画面表示//
         $(function(){
@@ -21,19 +21,16 @@
             $("#p3night_dn2").html(drugdata[3].night.drugname[2])
             $("#p3night_dn3").html(drugdata[3].night.drugname[3])
             $("#p3night_dn4").html(drugdata[3].night.drugname[4])
-            $("#p3night_dn").html(
-                drugdata[3].night.drugname[0]+"<br>"+
-                drugdata[3].night.drugname[1]+"<br>"+
-                drugdata[3].night.drugname[2]+"<br>"+
-                drugdata[3].night.drugname[3]+"<br>"+
-                drugdata[3].night.drugname[4])
-            $("#p3night_p").html(
-                drugdata[3].night.purpose[0]+"<br>"+
-                drugdata[3].night.purpose[1]+"<br>"+
-                drugdata[3].night.purpose[2]+"<br>"+
-                drugdata[3].night.purpose[3]+"<br>"+
-                drugdata[3].night.purpose[4]
-            )
+            $("#p3night_dn00").html(drugdata[3].night.drugname[0])
+            $("#p3night_dn01").html(drugdata[3].night.drugname[1])
+            $("#p3night_dn02").html(drugdata[3].night.drugname[2])
+            $("#p3night_dn03").html(drugdata[3].night.drugname[3])
+            $("#p3night_dn04").html(drugdata[3].night.drugname[4])
+            $("#p3night_p0").html(drugdata[3].night.purpose[0])
+            $("#p3night_p1").html(drugdata[3].night.purpose[1])
+            $("#p3night_p2").html(drugdata[3].night.purpose[2])
+            $("#p3night_p3").html(drugdata[3].night.purpose[3])
+            $("#p3night_p4").html(drugdata[3].night.purpose[4])
             $("#p3night_n").html(drugdata[3].night.note)
             $("#p3night_t").html(drugdata[3].night.time)
         }
@@ -55,7 +52,7 @@
             if(document.form1.drugdose0.value==DD0 && document.form1.drugdose1.value==DD1 && document.form1.drugdose2.value==DD2 && document.form1.drugdose3.value==DD3 && document.form1.drugdose4.value==DD4){
                 Right = confirm("正しく確認できています。\n患者ID確認画面でQRを読み込んでください。");
                 if(Right == true){
-                    localStorage.setItem(P3_STATUS2,"確認済み");
+                    localStorage.setItem(P3_STATUS1,"確認済み");
                     location.href="patient3.html";
                 }else{
                     alert("キャンセルされました。");
@@ -115,7 +112,19 @@
             <th colspan="2">使用目的</th>
         </tr>
         <tr>
-            <td id="p3night_dn"></td><td id="p3night_p"></td>
+            <td id="p3night_dn00"></td><td id="p3night_p0"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn01"></td><td id="p3night_p1"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn02"></td><td id="p3night_p2"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn03"></td><td id="p3night_p3"></td>
+        </tr>
+        <tr>
+            <td id="p3night_dn04"></td><td id="p3night_p4"></td>
         </tr>
         <tr>
             <th colspan="2">備考</th>
