@@ -8,7 +8,7 @@
 
     <script type="text/javascript">
         //LocalStorageの入れ物//
-        var P3_STATUS2 = "P3_ST2";
+        var P3_STATUS1 = "P3_ST1";
 
         //JSON読み込み＆画面表示//
         $(function(){
@@ -52,7 +52,7 @@
             if(document.form1.drugdose0.value==DD0 && document.form1.drugdose1.value==DD1 && document.form1.drugdose2.value==DD2 && document.form1.drugdose3.value==DD3 && document.form1.drugdose4.value==DD4){
                 Right = confirm("正しく確認できています。\n患者ID確認画面でQRを読み込んでください。");
                 if(Right == true){
-                    localStorage.setItem(P3_STATUS2,"確認済み");
+                    localStorage.setItem(P3_STATUS1,"確認済み");
                     location.href="patient3.html";
                 }else{
                     alert("キャンセルされました。");
