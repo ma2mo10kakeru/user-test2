@@ -21,19 +21,16 @@
             $("#p0noon_dn2").html(drugdata[0].noon.drugname[2])
             $("#p0noon_dn3").html(drugdata[0].noon.drugname[3])
             $("#p0noon_dn4").html(drugdata[0].noon.drugname[4])
-            $("#p0noon_dn").html(
-                drugdata[0].noon.drugname[0]+"<br>"+
-                drugdata[0].noon.drugname[1]+"<br>"+
-                drugdata[0].noon.drugname[2]+"<br>"+
-                drugdata[0].noon.drugname[3]+"<br>"+
-                drugdata[0].noon.drugname[4])
-            $("#p0noon_p").html(
-                drugdata[0].noon.purpose[0]+"<br>"+
-                drugdata[0].noon.purpose[1]+"<br>"+
-                drugdata[0].noon.purpose[2]+"<br>"+
-                drugdata[0].noon.purpose[3]+"<br>"+
-                drugdata[0].noon.purpose[4]
-            )
+            $("#p0noon_dn00").html(drugdata[0].noon.drugname[0])
+            $("#p0noon_dn01").html(drugdata[0].noon.drugname[1])
+            $("#p0noon_dn02").html(drugdata[0].noon.drugname[2])
+            $("#p0noon_dn03").html(drugdata[0].noon.drugname[3])
+            $("#p0noon_dn04").html(drugdata[0].noon.drugname[4])
+            $("#p0noon_p0").html(drugdata[0].noon.purpose[0])
+            $("#p0noon_p1").html(drugdata[0].noon.purpose[1])
+            $("#p0noon_p2").html(drugdata[0].noon.purpose[2])
+            $("#p0noon_p3").html(drugdata[0].noon.purpose[3])
+            $("#p0noon_p4").html(drugdata[0].noon.purpose[4])
             $("#p0noon_n").html(drugdata[0].noon.note)
             $("#p0noon_t").html(drugdata[0].noon.time)
         }
@@ -56,7 +53,7 @@
                 Right = confirm("正しく確認できています。\n患者ID確認画面でQRを読み込んでください。");
                 if(Right == true){
                     localStorage.setItem(P0_STATUS1,"確認済み");
-                    pagereturn();
+                    location.href="patient0.html";
                 }else{
                     alert("キャンセルされました。");
                 }
@@ -68,9 +65,6 @@
                     alert("キャンセルされました。")
                 }
             }
-        }
-        function pagereturn(){
-            location.href="patient0.html"
         }
         //用量チェック//
     </script>
@@ -118,7 +112,19 @@
             <th colspan="2">使用目的</th>
         </tr>
         <tr>
-            <td id="p0noon_dn"></td><td id="p0noon_p"></td>
+            <td id="p0noon_dn00"></td><td id="p0noon_p0"></td>
+        </tr>
+        <tr>
+            <td id="p0noon_dn01"></td><td id="p0noon_p1"></td>
+        </tr>
+        <tr>
+            <td id="p0noon_dn02"></td><td id="p0noon_p2"></td>
+        </tr>
+        <tr>
+            <td id="p0noon_dn03"></td><td id="p0noon_p3"></td>
+        </tr>
+        <tr>
+            <td id="p0noon_dn04"></td><td id="p0noon_p4"></td>
         </tr>
         <tr>
             <th colspan="2">備考</th>
