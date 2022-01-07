@@ -82,7 +82,7 @@ section {
   a.btn_home:hover {
     background: #668ad8;
     border: 1px solid #668ad8;
-    color: #fff;
+    color: rgb(255, 247, 228);
   }
   a.btn_home:before {
     content: "";
@@ -105,7 +105,7 @@ section {
       content: '';
       width: 16px;
       height: 16px;
-      background: #ffffff;
+      background: rgb(255, 247, 228);
       border-radius: 50%;
       position: absolute;
       top: 50%;
