@@ -66,7 +66,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(255, 247, 228);
+    background: rgb(255, 250, 237);
     border: 1px solid #668ad8;
     box-sizing: border-box;
     width: 100%;
@@ -82,7 +82,7 @@ section {
   a.btn_home:hover {
     background: #668ad8;
     border: 1px solid #668ad8;
-    color: rgb(255, 247, 228);
+    color: rgb(255, 250, 237);
   }
   a.btn_home:before {
     content: "";
@@ -105,7 +105,7 @@ section {
       content: '';
       width: 16px;
       height: 16px;
-      background: rgb(255, 247, 228);
+      background: rgb(255, 250, 237);
       border-radius: 50%;
       position: absolute;
       top: 50%;
